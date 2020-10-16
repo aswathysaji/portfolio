@@ -1,0 +1,435 @@
+  
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+
+/*Container*/
+
+.intro{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+
+/*navbar*/
+.navbar{
+    font-family: 'Courier Prime', monospace;
+    font-weight: bold;
+    width: 100%;
+    display: inline-block;
+}
+.navbar img{
+    width: 5%;
+    vertical-align: top;
+    height: 5%;
+    margin-top:5%;
+    margin-left: 10%;
+}
+.navbar a {
+    vertical-align: top;
+    margin-right: 10%;
+    height: 5%;        
+    margin-top:5%;
+    float: right;
+    color:#1a1a2e ;
+}
+.navbar a:hover{
+    color: white;
+}
+/*end of navbar*/
+/* title section */
+#title{
+    background-image: url("./images/bg5.jpg");
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#title::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+#title h1{
+    display: block;
+    width: fit-content;
+    font-size: 6rem;
+    font-family: 'Sacramento', cursive;
+    font-weight: bold;
+    position: relative;
+    color:#212121;
+    margin-bottom:3%;
+    text-shadow:3px 3px gray;
+}
+#title h2{
+        font-size: 2rem;
+        font-family: 'Satisfy', cursive;
+        color:#212121;
+        font-weight: 700;
+        margin-bottom:2%;
+}
+#title .btn{
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: transparent;
+    color:#212121;
+    border: 2px dashed #212121 ;
+    font-size: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight:700;
+    letter-spacing: .1rem;
+    margin-top: 5%;
+    border-radius: 1rem;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+#title .btn:hover{
+    color: white;
+    background-color:#212121 ;
+}
+@media (max-width:600px){
+
+    #title{
+        text-align: center;
+    }
+    #title h1{
+        font-size: 5rem;
+    }
+    #title h2{
+        font-size:1.8rem ;
+    }
+}
+/* end of title section */
+/*About section*/
+#about{
+    padding:5% 10%;
+    text-align: center;
+}
+.myself{
+    margin-bottom: 5%;
+}
+#about h1{
+    font-family: 'Sacramento', cursive;
+    font-size: 5rem;
+    color: #ff7e67;
+    padding: 5%;
+    text-shadow: 2px 2px #ffbb91;
+}
+#about p{
+    padding: 1.5% 5%;
+    line-height: 2;
+    letter-spacing: .1rem;
+    font-size: 1.2rem;
+    text-align:left;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+}
+.about{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 1s all ease-in-out;
+}
+.about-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
+#about img{
+    float: left;
+    padding: 10% 7% 9% 7%;
+    width: 40%;
+}
+@media (max-width:600px){
+
+    #about{
+        text-align: center;
+    }
+    #about p{
+        text-align: center;
+        font-size: 1rem;
+    }
+    #about h1{
+        font-size: 4rem;
+    }
+    #about img{
+        float: initial;
+        width:50%;
+    }
+}
+/*end of about section*/
+/*goals and career aspirations*/
+#goals{
+    padding: 5% 10%;
+    text-align: center;
+    background-image: url("./images/bg5.jpg");
+    background-size: cover;
+}
+#goals h1{
+    font-family: 'Sacramento', cursive;
+    font-size: 5rem;
+    color: #ff2e63;
+    padding: 2%;
+    text-shadow: 2px 2px whitesmoke;
+}
+#goals p{
+    padding: 5% 5%;
+    line-height: 2;
+    letter-spacing: .1rem;
+    text-align: left;
+    font-size: 1.2rem;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    color: #212121;
+}
+#goals img{
+    float: right;
+    padding: 6% 5%;
+    width: 30%;
+}
+@media (max-width:600px){
+
+    #goals{
+        text-align: center;
+    }
+    #goals p{
+        text-align: center;
+        font-size: 1rem;
+    }
+    #goals h1{
+        font-size: 4rem;
+    }
+    #goals img{
+        float: initial;
+    }
+}
+/*end of goals*/
+/* academics */
+#academics{
+    padding: 5% 10%;
+    text-align: center;
+}
+#academics h1{
+    font-family: 'Sacramento', cursive;
+    font-size: 6rem;
+    color: #ff7e67;
+    padding: 2%;
+    text-shadow: 2px 2px #ffbb91;
+}
+.academics{
+    opacity: 0;
+    transform: translateY(200px);
+    transition: 1s all ease-in-out;
+}
+.academics-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
+#academics p{
+    padding:3%;
+    line-height: 2;
+    letter-spacing: .1rem;
+    font-size: 1.2rem;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+}
+#academics img{
+    width:30%;
+    padding: 4% 4%;
+}
+@media (max-width:600px){
+    #academics h1{
+        font-size: 4rem;
+    }
+    #academics p{
+        font-size: 1rem;
+    }
+}
+/*end of academics*/
+/*skills*/
+#skills{
+    padding: 5% 10%;
+    text-align: center;
+    background-image: url("./images/bg5.jpg");
+    background-size: cover;
+}
+#skills h1{
+    font-family: 'Sacramento', cursive;
+    font-size: 5rem;
+    color: #ff2e63;
+    padding: 2%;
+    text-shadow: 2px 2px whitesmoke;
+}
+#skills h2{
+    font-family: 'Sacramento', cursive;
+    font-size: 4rem;
+    color: #ff2e63;
+    padding: 2%;
+    text-shadow: 2px 2px whitesmoke;
+}
+#skill-row,#skill-row-2{
+    display:flex;
+    flex-direction: row;
+}
+p{
+    padding:3%;
+    line-height: 2;
+    letter-spacing: .1rem;
+    font-size: 1rem;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    color: #212121;
+}
+#skill-row-2 #skill-1 img{
+    width: 50%;
+}
+#skill-1,#skill-2{
+    padding:5%;
+}
+#skills img{
+    width:30%;
+    padding: 5% 5%;
+}
+#skill-1 h3,#skill-2 h3,h3{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2rem;
+    color: #fe7171;
+    text-shadow: 2px 2px #ffb0b0;
+    padding: 2%;
+}
+#skill-1 img,#skill-2 img,.programmer{
+    width: 25%;
+}
+#skill-row #skill-2 img{
+    width: 45%;
+}
+@media (max-width:600px){
+    #skills h1{
+        font-size: 4rem;
+    }
+    #skill-row,#skill-row-2{
+        display: flex;
+        flex-direction: column;
+    }
+    #skill-row #skill-2 img,#skill-row-2 #skill-1 img{
+        width: 30%;
+    }
+}
+/*end of my skills*/
+/*works*/
+#works{
+    padding: 5% 10%;
+    text-align: center;
+}
+.works{
+    opacity: 0;
+    transform: translateY(200px);
+    transition: 1s all ease-in-out;
+}
+.works-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
+#works h1{
+    font-family: 'Sacramento', cursive;
+    font-size: 5rem;
+    color: #ff7e67;
+    padding: 2%;
+    text-shadow: 2px 2px #ffbb91;
+}
+#works img{
+    width: 30%;
+    padding: 5% 5%;
+}
+#works p{
+    padding:3%;
+    line-height: 2;
+    letter-spacing: .1rem;
+    font-size: 1.2rem;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+}
+#works .btn{
+    display: inline-block;
+    padding: 10px 30px;
+    background-color:#ffbb91;
+    color:black;
+    font-size: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight:700;
+    letter-spacing: .1rem;
+    margin-top: 5%;
+    border-radius: 1rem;
+}
+#works .btn:hover{
+    color: white;
+    background-color: #ff7e67 ;
+}
+@media (max-width:600px){
+    #works h1{
+        font-size: 4rem;
+    }
+    #works p{
+        font-size: 1rem;
+    }
+}
+/*footer*/
+#contact{
+    padding: 5% 10%;
+    background-image: url("./images/bg5.jpg");
+    background-size: cover;
+}
+#contact img{
+    width:30%;
+    padding: 5% 5%;
+}
+.contact-me{
+    text-align:center;
+}
+#contact h1{
+    font-family: 'Sacramento', cursive;
+    font-size: 5rem;
+    color: #ff2e63;
+    padding: 2%;
+    text-shadow: 2px 2px whitesmoke;
+}
+#contact a{
+    padding: 3%;
+}
+.footer-link{
+    padding: 5%;
+    font-family: 'Courier Prime', monospace;
+    color: black;
+}
+.footer-link:hover{
+    color:  #ffbb91;
+}
+.copyright{
+    font-family: 'Courier Prime', monospace;
+    line-height: 2;
+}
+@media(max-width:600px){
+    #contact h1{
+        font-size: 4rem;
+    }
+}
+/*end of footer*/
+hr{
+    border: dotted gray 6px;
+    border-bottom: none;
+    width: 5%;
+    margin: 20px auto 20px auto;
+}
